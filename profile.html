@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart PadgeResto</title>
+  <!-- css file -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+
+  <!-- icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <!-- start header  -->
+  <header>
+    <a href="index.html" class="logo"><i class="fa-brands fa-docker"></i>Apex.</a>
+
+    <div id="noItem"></div>
+
+    <div class="icons">
+      <a href="favorites.html" class="fas fa-heart"></a>
+      <a href="profile.html" class="fa-solid fa-user"></a>
+      <button href="#" class="fas fa-shopping-cart shopping-cart"></button>
+      <span class="badge"></span>
+
+      <div class="carts-products">
+
+        <div class="item">
+        </div>
+
+        <a href="cartproducts.html" class="btn">View all products</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="information">
+    <div id="user_info">
+      <a href="#" id="user" class="btn"></a>
+      <a href="#" id="name" class="btn"></a>
+    <a href="#" id="logIn" class="btn">LogIn <i class="fa-solid fa-right-to-bracket"></i></a>
+      <!-- <a href="#" id="logout" class="btn">Log Out <i class="fa-solid fa-lock"></i></a> -->
+    </div>
+
+  </section>
+
+  <section class="profile">
+    <div class="sidebar">
+      <!-- sidebar  -->
+      <div class="account">
+        <img src="images/menu-4.jpg" alt="">
+        <div class="account-info">
+          <p class="well">Hello,</p>
+          <h4 class="name" id="username"></h4>
+          <p class="email" id="email"></p>
+          <span class="length" id="productsLength">Products: (<span>   </span>)</span>
+          <a href="editProfile.html" class="edit">Edit Profile</a>
+        </div>
+      </div>
+
+      <!-- profile links -->
+      <div class="profile-links">
+        <!-- single link -->
+        <div class="links">
+      
+          <a href="#" class="sec-name title">
+            <span class="icon">
+              <i class="far fa-address-card"></i>
+            </span>
+            Manage Account</a>
+      
+          <a href="#" class="sec-name">
+            Profile info
+          </a>
+      
+          <a href="#" class="sec-name">
+            Manage address
+          </a>
+      
+          <a href="#" class="sec-name">
+            change password
+          </a>
+      
+        </div>
+      
+        <!-- single link -->
+        <div class="links">
+      
+          <a href="#" class="sec-name title">
+            <span class="icon">
+              <i class="fa-solid fa-gift"></i>
+            </span>
+            My Order History
+          </a>
+      
+          <a href="#" class="sec-name">
+            My Returns
+          </a>
+      
+          <a href="#" class="sec-name">
+            My cancellations
+          </a>
+      
+          <a href="#" class="sec-name">
+            My Reviews
+          </a>
+      
+        </div>
+      
+        <!-- single link -->
+        <div class="links">
+      
+          <a href="#" class="sec-name title">
+            <span class="icon">
+              <i class="fa-solid fa-credit-card"></i>
+            </span>
+            Payment methods
+          </a>
+      
+          <a href="#" class="sec-name">
+            voucher
+          </a>
+      
+        </div>
+      
+        <!-- single link -->
+        <div class="links">
+          <a href="favorites.html" class="sec-name title">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+            My Wishlist
+          </a>
+        </div>
+      
+        <!-- single link -->
+        <div class="links">
+          <a id="logout" class="sec-name title">
+            <span class="icon">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </span>
+            Logout
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- <div class="items">
+      
+    <div class="item">     
+          <div class="info">
+
+                <img src="images/watch-1.jpg" alt="">
+              <div class="user-info">
+                <h3>john deo</h3>
+                <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque ea delectus cumque.</p>
+                <span class="price">$299</span>
+              </div>
+              <div class="remov-cart">
+                <a href="#" class="remove">Remove from cart</a>
+              </div>
+            </div>
+    </div>
+
+    <div class="item">
+      <div class="info">
+          <img src="images/clothes-4.jpg" alt="">
+        <div class="user-info">
+          <h3>john deo</h3>
+          <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque ea delectus cumque.</p>
+          <span class="price">$299</span>
+        </div>
+        <div class="remov-cart">
+          <a href="#" class="remove">Remove from cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info">
+        <img src="images/clothes-4.jpg" alt="">
+        <div class="user-info">
+          <h3>john deo</h3>
+          <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque ea delectus cumque.</p>
+          <span class="price">$299</span>
+        </div>
+        <div class="remov-cart">
+          <a href="#" class="remove">Remove from cart</a>
+        </div>
+      </div>
+    </div>
+    </div>
+     -->
+
+  </section>
+
+
+  <!-- footer section  -->
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>locations</h3>
+        <a href="#">cairo</a>
+        <a href="#">japan</a>
+        <a href="#">russia</a>
+        <a href="#">USA</a>
+        <a href="#">france</a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#">home</a>
+        <a href="#">dishes</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">review</a>
+        <a href="#">order</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#">+20111-222-3333</a>
+        <a href="#">+20111-555-4444</a>
+        <a href="#">Apex@gmail.com</a>
+        <a href="#">cairo, eygpt, - 11511</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="#">twitter</a>
+        <a href="#">instagram</a>
+        <a href="#">linkedin</a>
+      </div>
+
+
+    </div>
+
+    <div class="credit">all right reserved |2022| by <span>'elsaleh'</span> </div>
+
+  </section>
+
+
+  <!-- js file  -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cartMenu.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>

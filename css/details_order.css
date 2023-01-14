@@ -1,0 +1,140 @@
+:root {
+
+  --spanish-gray: hsl(0, 0%, 60%);
+  --sonic-silver: hsl(0, 0%, 47%);
+  --eerie-black: hsl(0, 0%, 13%);
+  --salmon-pink: hsl(353, 100%, 78%);
+  --sandy-brown: hsl(29, 90%, 65%);
+  --bittersweet: hsl(0, 100%, 70%);
+  --ocean-green: hsl(152, 51%, 52%);
+  --davys-gray: hsl(0, 0%, 33%);
+  --cultured: hsl(0, 0%, 93%);
+  --white: hsl(0, 100%, 100%);
+  --onyx: hsl(0, 0%, 27%);
+}
+
+.details{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.details .content {
+  flex: 40%;
+}
+
+.details .inputBox{
+  flex: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: center;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+  padding: 0rem 2rem;
+}
+
+.inputBox .btn-details{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  margin: .5rem auto;
+  font-size: 1.2rem;
+  padding: 1rem 6rem;
+  border-radius: .6rem;
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--bittersweet);
+}
+
+.inputBox .btn-details:first-child{
+  background-color: rgb(243, 201, 14);
+  color: var(--eerie-black);
+}
+.inputBox .btn-details:last-child{
+  background-color: var(--sonic-silver);
+}
+
+
+.content h3 {
+  color: var(--eerie-black);
+  font-size: 4rem;
+  margin-bottom: .8rem;
+}
+
+.content .stars{
+  color: var(--sandy-brown);
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.details .image {
+  flex: 1 1 20%;
+}
+
+.details .image img {
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.details .avilab,
+.details .brand{
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--eerie-black);
+}
+
+.stock,
+.name-brand{
+  font-size: 1.7rem;
+  color: var(--ocean-green);
+  font-weight: 800;
+}
+
+.details .price{
+  font-size: 2.5rem;
+  color: var(--bittersweet);
+  
+  margin-bottom: 0.5rem;
+}
+
+.details .info{
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--sonic-silver);
+  margin-bottom: 0.8rem;
+}
+
+/* media queries  */
+
+@media (max-width:768px) {
+.details .content {
+    flex: 1 1 50%;
+  }
+  .details .image {
+    flex: 1 1 45%;
+  }
+  .details .inputBox {
+  display: block;
+  max-width: 80%;
+  height: fit-content;
+  margin: auto;
+}
+}
+
+@media (max-width:450px) {
+.details .content {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .details .image {
+    flex: 1 1 45%;
+  }
+}

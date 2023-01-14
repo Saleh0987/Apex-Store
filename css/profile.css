@@ -1,0 +1,108 @@
+.profile{
+  display: grid;
+  /* grid-template-columns: repeat(2, 30% 70%); */
+  grid-template-columns: 80%;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  background-color: #fff;
+}
+
+.sidebar{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4;
+  padding: .5rem;
+}
+
+.account{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.account img{
+  max-width: 8rem;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+
+.account-info{
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 1rem;
+  width: 100%;
+}
+.well{
+  font-size: 2rem;
+  color: var(--eerie-black);
+}
+.name{
+  font-size: 2.5rem;
+  color: var(--bittersweet);
+}
+.email{
+  font-size: 1.5rem;
+  color: var(--sonic-silver);
+  text-transform: none;
+}
+.length{
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.edit{
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  background: #000;
+  padding: .5rem;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.sec-name {
+  padding-left: 5rem;
+  position: relative;
+  margin-bottom: .5rem;
+  font-size: 1.8rem;
+  color: var(--onyx);
+  font-weight: 600;
+}
+
+.title{
+  color: red;
+  font-weight: 800;
+}
+
+#logout{
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  top: .1rem;
+  font-size: 1.5rem;
+  color: var(--ocean-green);
+}
+
+#name{
+  display: none;
+}
