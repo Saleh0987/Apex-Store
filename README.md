@@ -4,6 +4,7 @@ ecommerce # using
 - HTML
 - CSS
 - JAVASCRIPT
+- SwiperJs
 
 # Featured
 - add to cart
