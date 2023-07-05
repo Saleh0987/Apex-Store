@@ -41,7 +41,7 @@ let drawProductUI;
   else {
     noProductsDom.innerHTML = "No Products !!";
     setTimeout(() => {
-      window.location = "index.html";
+      window.location = "home.html";
     }, 1000)
   }
 
