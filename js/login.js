@@ -12,32 +12,26 @@ function login(e) {
 
   if (username.value === "" || password.value === ""){
         
-    Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: '<a href="">Why do I have this issue?</a>'
-        })
+    alert('Something went wrong')
     
-  } else { if (
+  } else { 
+    if (
       getUser &&
       getUser.trim() === username.value.trim() &&
       getPassword &&
       getPassword === password.value)
-  {
+    {
     
-    setTimeout(() => {
-      window.location = "index.html";
-    }, 1100);
-    
-  } else {
+    alert('Login successful!')
 
-  Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Something went wrong!',
-  footer: '<a href="">Why do I have this issue?</a>'
-})
+
+      setTimeout(() => {
+        window.location = "home.html";
+      }, 1100);
+    
+    } else {
+    alert('Invalid username or password!')
+
     }
   }
 }

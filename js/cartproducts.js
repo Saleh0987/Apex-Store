@@ -1,5 +1,7 @@
 let detailsItem = document.getElementById("Details");
 let noProductsDom = document.getElementById("noItem");
+let badgeDom = document.querySelector(".badge");
+
 function drawCartProductUI(allProducts = []) {
 
   // check item or no 
@@ -12,9 +14,10 @@ function drawCartProductUI(allProducts = []) {
 
 
 let products = JSON.parse(localStorage.getItem("productsInCart")) || allProducts;
-  let productsUI = products.map((item) => {
-    return `
-    <div class="whish-list">
+let productsUI = products.map((item) => {
+    let totalPrice = item.price * item.qty;
+  return `
+  <div class="whish-list">
 
       <div class="image">
         <img src=${item.imageUrl} alt="">
@@ -30,10 +33,10 @@ let products = JSON.parse(localStorage.getItem("productsInCart")) || allProducts
         </p>
       </div>
 
-      <div class="price">$${item.price}</div>
-      <a href="#" class="btn" onclick="removeItemFromCart(${item.id})">
+      <div class="price">$${totalPrice}</div>
+      <button href="#" class="remove" onclick="removeItemFromCart(${item.id})">
         remove from cart
-      </a>
+      </button>
       </div>
     
     `;
@@ -45,11 +48,22 @@ drawCartProductUI();
 
 // Remove Product
 function removeItemFromCart(id) {
-  let productsInCart = localStorage.getItem("productsInCart");
-  if (productsInCart) {
-    let items = JSON.parse(productsInCart);
-    let filteredItems = items.filter((item) => item.id !== id);
-    localStorage.setItem("productsInCart", JSON.stringify(filteredItems));
-    drawCartProductUI(filteredItems);
+  let confirmed = confirm("Are you sure you want to remove this item from your cart?");
+  if (confirmed) {
+    let productsInCart = localStorage.getItem("productsInCart");
+    if (productsInCart) {
+      let items = JSON.parse(productsInCart);
+      let itemIndex = items.findIndex((item) => item.id === id);
+      if (itemIndex > -1) {
+        if (items[itemIndex].qty > 1) {
+          items[itemIndex].qty--;
+          items[itemIndex].totalPrice -= items[itemIndex].price;
+        } else {
+          items.splice(itemIndex, 1);
+        }
+        localStorage.setItem("productsInCart", JSON.stringify(items));
+        drawCartProductUI(items);
+      }
+    }
   }
 }

@@ -1,5 +1,137 @@
 let productsDom = document.getElementById("MenuItem");
-let products = productsDB;
+let productsDB = [
+    {
+    id: 1,
+    title: "Men's Jacket",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/jacket-1.jpg",
+    stock: "in Stock",
+    brand: "ZARA",
+    category: "Jacket",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 2,
+    title: "Wall Clock",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/watch-3.jpg",
+    stock: "in Stock",
+    brand: "RADO",
+    category: "Watches",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 3,
+    title: "Boot shoe",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/shoe-5.jpg",
+    stock: "Last Stock",
+    brand: "CAT",
+    category: "Shoes",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 4,
+    title: "Summer Short",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/shorts-1.jpg",
+    stock: "in Stock",
+    brand: "ADIDAS",
+    category: "Clothes",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 5,
+    title: "Sports Shoe",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/sports-6.jpg",
+    stock: "Last Stock",
+    brand: "NIKE",
+    category: "Shoes",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 6,
+    title: "Winter Jacket",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/jacket-6.jpg",
+    stock: "Last Stock",
+    brand: "OR",
+    category: "Jacket",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 7,
+    title: "Perfume Women",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/perfume.jpg",
+    stock: "Last Stock",
+    brand: "DIOR",
+    category: "Accessories",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 8,
+    title: "Bkue Shirt",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/shirt-1.jpg",
+    stock: "in Stock",
+    brand: "LC Wikiki",
+    category: "Clothes",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 9,
+    title: "Apple Watch",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/watch-2.jpg",
+    stock: "in Stock",
+    brand: "Apple",
+    category: "Watches",
+    isMe: "N",
+    qty: 1,
+    
+  },
+  {
+    id: 10,
+    title: "Apple Watch",
+    desc: "Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Blanditiis, Veniam?",
+    price: 12.99,
+    imageUrl: "images/watch-2.jpg",
+    stock: "in Stock",
+    brand: "Apple",
+    category: "Accessories",
+    isMe: "N",
+    qty: 1,
+    
+  },
+]
+
 
 // 
 let drawProductUI;
@@ -21,7 +153,7 @@ let drawProductUI;
                   <i class="fas fa-star"></i>
           <i class="fas fa-star-half-alt"></i>
         </div>
-        <a onclick="saveItemData(${item.id})">${item.title}</a>
+        <button onclick="saveItemData(${item.id})">${item.title}</button>
         <p>${item.desc}</p>
         
         <span class="price">$${item.price}</span>
@@ -37,13 +169,13 @@ let drawProductUI;
   }).join("");
 
   productsDom.innerHTML = productsUi;
-})(JSON.parse(localStorage.getItem("products")) || products);
+})(JSON.parse(localStorage.getItem("products")) || productsDB);
 
 
 // Add To Cart;
 function addedToCart(id) {
   if (localStorage.getItem("username")) {
-    let products = JSON.parse(localStorage.getItem("products") || products);
+    let products = JSON.parse(localStorage.getItem("products")) || productsDB;
     let product = products.find((item) => item.id === id);
     
     // remove repeat item in cart
@@ -55,6 +187,8 @@ function addedToCart(id) {
       })
     } else {
       addedItem.push(product);
+      
+      alert("Item added to cart");
     }
 
     cartProductDivDom.innerHTML = "";
@@ -70,7 +204,7 @@ function addedToCart(id) {
           <span class="price">$${item.price}</span>
         </div>
         <div class="remov-cart">
-          <a href="#" class="remove">Remove from cart</a>
+          <button class="remove">Remove from cart</button>
         </div>
       </div>`;
   
@@ -127,18 +261,18 @@ let favoritesItems = localStorage.getItem("productsFavorite") ?
   JSON.parse(localStorage.getItem("productsFavorite")) : [];
 function addedToFavorite(id) {
   if (localStorage.getItem("username")) {
-    let choosenItem = products.find((item) => item.id === id);
+    let choosenItem = productsDB.find((item) => item.id === id);
     choosenItem.liked = true;
     favoritesItems = [...favoritesItems, choosenItem]; 
     let uniqueProducts = getUniqueArr(favoritesItems, "id");
     localStorage.setItem("productsFavorite", JSON.stringify(uniqueProducts));
-    products.map(item => {
+    productsDB.map(item => {
       if (item.id === choosenItem.id) {
         item.liked = true;
       }
     })
-    localStorage.setItem("products", JSON.stringify(products));
-    drawProductUI(products);
+    localStorage.setItem("products", JSON.stringify(productsDB));
+    drawProductUI(productsDB);
   } else {
     window.location = "login.html";
   }
@@ -152,7 +286,7 @@ categoryFilter.addEventListener("change", getProductsFilterByCategory);
 function getProductsFilterByCategory(e) {
   let val = e.target.value;
 
-  let products = JSON.parse(localStorage.getItem("products")) || products;
+  let products = JSON.parse(localStorage.getItem("products")) || productsDB;
 
   if (val === "all") {
     drawProductUI(products);

@@ -206,7 +206,20 @@ header .icons .badge{
   line-height: 15px;
   display: none;
 }
-
+header .icons .badgeFav{
+width: 15px;
+  height: 15px;
+  background: red;
+  color: #fff;
+  text-align: center;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: -5px;
+  right: 75px;
+  font-size: 10px;
+  line-height: 15px;
+}
 /* shopping Cart */
 .icons .carts-products{
 -ms-overflow-style: none;

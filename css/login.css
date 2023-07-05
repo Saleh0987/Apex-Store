@@ -1,6 +1,7 @@
 .order{
   margin-top: 4rem;
 }
+
 .order form {
   max-width: 50rem;
   border-radius: .5rem;
@@ -41,25 +42,25 @@
   width: 100%;
 }
 
-.order form .register, .text-primary{
-  font-weight: bold;
-  padding-bottom: 10px;
-  font-size: 1.5rem;
+.register{
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.register .text-primary{
+  color: var(--bittersweet);
 }
 
-.order form .text-primary{
-  color: var(--green);
+.order .btn{
+  display: block;
+  margin: auto;
+  background: var(--ocean-green);
+}
+.order .btn:hover{
+  background: var(--sandy-brown);
 }
 
-.order form .btn {
-  margin-top: 0;
-  width: 100%;
-}
-
-.order form .inputBox .input input:focus,
-.order form .inputBox .input textarea:focus {
-  border: .1rem solid var(--green);
-}
 
 /* fooooter  */
 .footer .box-container {

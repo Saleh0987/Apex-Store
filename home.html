@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Store</title>
+  <!-- css file -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- swiper  -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+  
+<!-- Header  -->
+<header>
+
+  <a href="index.html" class="logo"><i class="fa-brands fa-docker"></i>Apex.</a>
+
+  <nav class="navbar" id="links">
+    <a class="active" href="#home">home</a>
+    <a href="#menu">menu</a>
+    <a href="#order">order</a>
+    <a href="#review">review</a>
+    <a href="#about">about</a>
+  </nav>
+  
+  <div class="icons">
+    <i class="fas fa-bars" id="menu-bars"></i>
+    <a href="favorites.html" class="fas fa-heart"></a>
+    <span class="badgeFav"></span>
+    <a href="profile.html" class="fa-solid fa-user"></a>
+    <button class="fas fa-shopping-cart shopping-cart"></button>
+    <span class="badge"></span>
+
+    <div class="carts-products">
+
+    <div class="item">
+
+    </div>
+    
+    <a href="cartproducts.html" class="btn">View all products</a> 
+    </div>
+  </div>
+  
+</header>
+
+<section class="information">
+
+    <div id="user_info">
+      <a href="profile.html" id="name" class="btn"></a>
+      <a href="myProducts.html" id="my-products" class="btn">My Products</a>
+    <a href="#" id="logout" class="btn">Log Out <i class="fa-solid fa-lock"></i></a>
+    <a href="#" id="logIn" class="btn">LogIn <i class="fa-solid fa-right-to-bracket"></i></a>
+    </div>
+
+</section>
+
+<!-- Home Section  -->
+<section class="home" id="home">
+  <div class="swiper home-slider">
+    <div class="swiper-wrapper wrapper" id="HomeSlide">
+
+      <div class="swiper-slide slide">  
+        <div class="content">
+          <span id="our">Trending item</span>
+          <h3>Trekking & Running Shoes</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, eos, sit itaque provident repellendus ex consequatur, iusto odit vero harum corrupti vitae consequuntur! Iusto corrupti beatae in consequatur! Distinctio, veniam? Ratione mollitia minima vero aliquid!</p>
+          <a href="#menu" class="home-btn">order now</a>
+        </div>
+        <div class="image">
+          <img src="images/sports-5.jpg" alt="">
+        </div>
+      </div>
+
+    <div class="swiper-slide slide">
+      <div class="content">
+        <span id="our">Trending item</span>
+        <h3>Smart watche Vital Plus</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, eos, sit itaque provident repellendus ex
+        consequatur, iusto odit vero harum corrupti vitae consequuntur! Iusto corrupti beatae in consequatur! Distinctio,
+        veniam? Ratione mollitia minima vero aliquid!</p>
+        <a href="#menu" class="home-btn">order now</a>
+      </div>
+      <div class="image">
+        <img src="images/watch-1.jpg" alt="">
+      </div>
+    </div>
+
+
+      <div class="swiper-slide slide">
+        <div class="content">
+          <span id="our">Trending item</span>
+          <h3>Rose Gold Peacock Earrings</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, eos, sit itaque provident repellendus ex
+          consequatur, iusto odit vero harum corrupti vitae consequuntur! Iusto corrupti beatae in consequatur! Distinctio,
+          veniam? Ratione mollitia minima vero aliquid!?</p>
+          <a href="#menu" class="home-btn">order now</a>
+        </div>
+        <div class="image">
+          <img src="images/jewellery-1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- product section  -->
+<section class="menu" id="menu">
+
+  <h3 class="sub-heading"> our menu </h3>
+  <h1 class="heading"> today's speciality </h1>
+
+  <div class="added">
+<div class="search">
+  <input type="search" id="item-search" placeholder="Search Here...">
+</div>
+  
+      <div class="filter">
+        <select id="category-filter">
+          <option value="" hidden>Filter By Category</option>
+          <option value="all">All</option>
+          <option value="Clothes">Clothes</option>
+          <option value="Jacket">Jacket</option>
+          <option value="Watches">Watches</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+      </div>
+    <div class="add">
+      <a href="createProduct.html" class="create-product">
+        <i class="fa fa-plus"></i> add item
+      </a>
+    </div>
+  </div>
+
+  <div class="box-container" id="MenuItem">
+
+  </div>
+
+</section>
+
+<!-- order section  -->
+<section class="order" id="order">
+
+  <h3 class="sub-heading"> order now </h3>
+  <h1 class="heading">free and fast </h1>
+
+  <form action="">
+
+    <div class="inputBox">
+      <div class="input">
+        <span>your name</span>
+        <input type="text" placeholder="enter your name">
+      </div>
+      <div class="input">
+        <span>your number</span>
+        <input type="number" placeholder="enter your number">
+      </div>
+    </div>
+
+    <div class="inputBox">
+      <div class="input">
+        <span>your order</span>
+        <input type="text" placeholder="enter food name">
+      </div>
+      <div class="input">
+        <span>additional food</span>
+        <input type="number" placeholder="extra with food">
+      </div>
+    </div>
+
+    <div class="inputBox">
+      <div class="input">
+        <span>how musch</span>
+        <input type="number" placeholder="enter food name">
+      </div>
+      <div class="input">
+        <span>date and time</span>
+        <input type="datetime-local">
+      </div>
+    </div>
+
+    <div class="inputBox">
+      <div class="input">
+        <span>your address</span>
+        <textarea name="" placeholder="enter our address" id="" cols="30" rows="10"></textarea>
+      </div>
+      <div class="input">
+        <span>your message</span>
+        <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+
+    <input type="submit" value="order now" class="btn">
+
+  </form>
+
+
+
+</section>
+
+<!-- review section  -->
+<section class="review" id="review">
+
+  <h3 class="sub-heading"> review customer's </h3>
+  <h1 class="heading"> what thye say </h1>
+
+  <div class="swiper review-slider">
+    <div class="swiper-wrapper" id="reviewSlide">
+
+      <div class="swiper-slide slide">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="images/pic-1.png" alt="">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat
+          consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus
+          voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam.
+          Ipsum,</p>
+
+      </div>
+
+      <div class="swiper-slide slide">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="images/pic-2.png" alt="">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat
+          consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus
+          voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam.
+          Ipsum,</p>
+
+      </div>
+
+      <div class="swiper-slide slide">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="images/pic-3.png" alt="">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat
+          consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus
+          voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam.
+          Ipsum,</p>
+
+      </div>
+
+
+      <div class="swiper-slide slide">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="images/pic-4.png" alt="">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat
+          consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus
+          voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam.
+          Ipsum,</p>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- about section  -->
+<section class="about" id="about">
+
+  <h3 class="sub-heading"> about us </h3>
+  <h1 class="heading"> why choose us? </h1>
+
+  <div class="row">
+
+    <div class="image">
+      <img src="images/blog-1.jpg" alt="">
+    </div>
+    <div class="content">
+      <h3>best Store in the country</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, error hic ullam commodi esse praesentium quasi
+        nulla magnam veritatis inventore.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolorem!</p>
+      <div class="icons-container">
+        <div class="icon">
+          <i class="fas fa-shipping-fast"></i>
+          <span>free delivery</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-dollar-sign"></i>
+          <span>easy payments</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-headset"></i>
+          <span>24/7 sercice</span>
+        </div>
+      </div>
+      <a href="#" class="home-btn">learn more</a>
+    </div>
+
+
+  </div>
+
+</section>
+
+<!-- footer section  -->
+<section class="footer">
+
+  <div class="box-container">
+
+    <div class="box">
+      <h3>locations</h3>
+      <a href="#">cairo</a>
+      <a href="#">japan</a>
+      <a href="#">russia</a>
+      <a href="#">USA</a>
+      <a href="#">france</a>
+    </div>
+
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">menu</a>
+      <a href="#">review</a>
+      <a href="#">about</a>
+      <a href="#">order</a>
+    </div>
+
+    <div class="box">
+      <h3>contact info</h3>
+      <a href="#">+20111-222-3333</a>
+      <a href="#">+20111-555-4444</a>
+      <a href="#">Apex@gmail.com</a>
+      <a href="#">cairo, eygpt, - 11511</a>
+    </div>
+
+    <div class="box">
+      <h3>follow us</h3>
+      <a href="#">facebook</a>
+      <a href="#">twitter</a>
+      <a href="#">instagram</a>
+      <a href="#">linkedin</a>
+    </div>
+
+
+  </div>
+
+  <div class="credit">all right reserved |2022| by <span>'elsaleh'</span> </div>
+
+</section>
+
+  <!-- js file  -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/cartMenu.js"></script>
+  
+</body>
+</html>

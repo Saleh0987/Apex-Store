@@ -55,11 +55,13 @@ function editProduct(id) {
 
 // Delete Product
 function deleteProduct(id) {
-  let products = JSON.parse(localStorage.getItem("products")) || productsDB;
-  let myProducts = products.filter((item) => item.isMe === "Y");
-  let filtered = myProducts.filter((i) => i.id !== id);
-  let clickedItem = myProducts.find((i) => i.id === id);
-  products = products.filter((i) => i.id !== clickedItem.id);
-  localStorage.setItem("products", JSON.stringify(products));
-  drawProductUI(filtered);
+  if (confirm("Are you sure you want to delete this product?")) {
+    let products = JSON.parse(localStorage.getItem("products")) || productsDB;
+    let myProducts = products.filter((item) => item.isMe === "Y");
+    let filtered = myProducts.filter((i) => i.id !== id);
+    let clickedItem = myProducts.find((i) => i.id === id);
+    products = products.filter((i) => i.id !== clickedItem.id);
+    localStorage.setItem("products", JSON.stringify(products));
+    drawProductUI(filtered);
+  }
 }
