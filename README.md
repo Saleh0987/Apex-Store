@@ -15,4 +15,4 @@ ecommerce # using
 - edit item
 - log in
 - log out
-- sve all in localStorage
+- save all in localStorage
